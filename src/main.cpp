@@ -1,38 +1,48 @@
 #include <iostream>
-#include "../include/ram.h"
-#include "../include/keyboard.h"
-#include "../include/gpu_display.h"
-#include "../include/disk.h"
-#include "../include/cpu.h"
+#include <vector>
+#include <string>
+#include "ram.h"
+#include "keyboard.h"
+#include "gpu_display.h"
+#include "disk.h"
+#include "cpu.h"
+#include "utility.h"
 
 int main() {
-    Ram ram;
-    Ram ram2;
-    ram.write(10, 0);
-    ram.write(3, 1);
-    ram.write(4, 2);
-
-    display(ram);
-
-    input(ram);
-
-    ram.write(8, 6);
-
-    display(ram);
-
-    auto summa = sum(ram);
-
-    std::cout << "sum is: " << summa << std::endl;
-
+    bool isProcess = true;
     const char* path = R"(..\test.txt)";
+    std::vector<std::string> menuList = {"sum", "save", "load", "input", "display", "exit" };
+    Ram ramData;
 
-    save(path, ram);
+    while(isProcess) {
+        auto result = selectMenuItem(menuList);
 
-    load(path, ram2);
-
-    std::cout << "New data: " << std::endl;
-
-    display(ram2);
+        switch (result) {
+            case 0:
+                std::cout << "Summation: " << sum(ramData) << std::endl;
+                break;
+            case 1:
+                std::cout << "(Saving mode)" << std::endl;
+                save(path, ramData);
+                break;
+            case 2:
+                std::cout << "(Loading mode)" << std::endl;
+                load(path, ramData);
+                break;
+            case 3:
+                std::cout << "(Entry mode)" << std::endl;
+                input(ramData);
+                break;
+            case 4:
+                std::cout << "(Show mode)" << std::endl;
+                display(ramData);
+                break;
+            case 5:
+            default:
+                std::cout << "Exit" << std::endl;
+                isProcess = false;
+        }
+    }
 
     return 0;
 }

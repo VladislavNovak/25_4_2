@@ -1,4 +1,4 @@
-#include "../include/cpu.h"
+#include "cpu.h"
 
 int sum(Ram &ram) {
     int acc = 0;

@@ -4,9 +4,9 @@
 #include "ram.h"
 
 // Позволяет сохранить данные Ram.memory[] на жёсткий диск
-void save(const char* path, Ram &ram);
+void save(const char*, Ram &);
 
 // Позволяет извлечь сохраненные на жёсткий диск данные в оперативную память (Ram.memory[])
-void load(const char* path, Ram &ram);
+void load(const char*, Ram &);
 
 #endif //INC_25_4_2_DISK_H

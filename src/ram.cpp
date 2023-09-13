@@ -1,4 +1,4 @@
-#include "../include/ram.h"
+#include "ram.h"
 
 bool Ram::write(int value, int index) {
     if (index < 0 || index >= MAX_SIZE) return false;

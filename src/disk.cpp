@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "../include/disk.h"
-#include "../include/utility.h"
+#include "disk.h"
+#include "utility.h"
 
-// модуль disk
 void save(const char* path, Ram &ram) {
     std::ofstream file(path, std::ios::out);
 
@@ -13,7 +12,6 @@ void save(const char* path, Ram &ram) {
     }
 }
 
-// модуль disk
 void load(const char* path, Ram &ram) {
     std::ifstream file(path);
     std::vector<int> data;

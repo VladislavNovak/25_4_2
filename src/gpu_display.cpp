@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/gpu_display.h"
+#include "gpu_display.h"
 
 void display(Ram &ram) {
     for (int i = 0; i < ram.getSize(); ++i) {

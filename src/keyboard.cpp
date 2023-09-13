@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../include/keyboard.h"
-#include "../include/utility.h"
+#include "keyboard.h"
+#include "utility.h"
 
 void input(Ram &ram) {
     while(true) {
