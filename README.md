@@ -44,3 +44,8 @@ D:/.../include/.. .h
 ```
 </details>
 </details>
+
+<details>
+<summary><span style="color:tomato;font-size:16px">Дополнительные источники</span></summary>
+<a href="https://dzen.ru/a/YCkMS7SYcFqBc6yY" style="margin-left:16px">Header guards и pragma once</a>
+</details>
