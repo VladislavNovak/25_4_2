@@ -1,9 +1,9 @@
 #include <iostream>
-#include "include/ram.h"
-#include "include/keyboard.h"
-#include "include/gpu_display.h"
-#include "include/disk.h"
-#include "include/cpu.h"
+#include "../include/ram.h"
+#include "../include/keyboard.h"
+#include "../include/gpu_display.h"
+#include "../include/disk.h"
+#include "../include/cpu.h"
 
 int main() {
     Ram ram;
